@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CST8919 Assignment 1</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 3rem auto; padding: 0 1rem; }
+    a.btn { display:inline-block; padding:.5rem 1rem; background:#2980b9; color:#fff;
+            text-decoration:none; border-radius:6px; margin-right:.5rem; }
+    pre { background:#f4f6f8; padding:1rem; border-radius:6px; overflow-x:auto; }
+  </style>
+</head>
+<body>
+  <h1>CST8919 Assignment 1 &mdash; Secure &amp; Monitored Flask App</h1>
+
+  {% if user %}
+    <p>Signed in as <strong>{{ user.name }}</strong> ({{ user.email }})</p>
+    <p><code>user_id: {{ user.user_id }}</code></p>
+    <a class="btn" href="/protected">Go to Protected Page</a>
+    <a class="btn" href="/logout">Logout</a>
+    <h3>Session identity claims</h3>
+    <pre>{{ pretty }}</pre>
+  {% else %}
+    <p>You are not signed in.</p>
+    <a class="btn" href="/login">Login with Auth0</a>
+  {% endif %}
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Protected &mdash; CST8919 Assignment 1</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 3rem auto; padding: 0 1rem; }
+    a.btn { display:inline-block; padding:.5rem 1rem; background:#2980b9; color:#fff;
+            text-decoration:none; border-radius:6px; margin-right:.5rem; }
+    .tag { background:#fff3d6; border:1px solid #d39e00; padding:.25rem .5rem; border-radius:4px; }
+  </style>
+</head>
+<body>
+  <h1>Protected Resource</h1>
+  <p><span class="tag">Sensitive endpoint</span> Every visit here emits a
+     <code>PROTECTED_ACCESS</code> log line.</p>
+  <p>Welcome, <strong>{{ user.name }}</strong>. You are authenticated.</p>
+  <p><code>user_id: {{ user.user_id }}</code></p>
+  <a class="btn" href="/protected">Access Again</a>
+  <a class="btn" href="/">Home</a>
+  <a class="btn" href="/logout">Logout</a>
+</body>
+</html>
