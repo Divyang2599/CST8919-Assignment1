@@ -7,3 +7,5 @@ __pycache__/
 *.pyc
 *.log
 .vscode/
+deploy.zip
+deploy_staging/
